@@ -1,0 +1,27 @@
+docker
+=============
+docker images
+docker ps -a
+
+Build my image:
+
+ docker build -t mypyweb .
+ 
+Run my image:
+docker run --name webapp -p 8080:4000 mypyweb
+
+docker run --name webapp -p 8080:4000 -e NAME="Dude" mypyweb
+
+Tag the image
+==============
+docker tag mypyweb javiercaparo/mypyweb:1.00
+
+Push the image to Docker hub
+=================
+docker push javiercaparo/mypyweb:1.00
+
+      check in Dockre hub
+	  
+Bring the image from Docker Hub
+=================
+ docker run -p 8080:4000 --name webapp -e NAME="Docker Hub" javiercaparo/mypyweb:1.00
